@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'default_secret_key')
 
-openai_api_key = "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"
+openai_api_key = os.environ.get('API_URL')
 tg = TagsGenerator(openai_api_key)
 
 
